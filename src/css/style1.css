@@ -187,6 +187,29 @@ html {
 	color: var(--dark);
 }
 
+/* 3 section */
+
+.works {
+	background: var(--light);
+	padding-top: 80px;
+}
+
+.works__grid {
+	margin-top: 53px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr) 1.5fr;
+	column-gap: 30px;
+	row-gap: 50px;
+}
+
+.works__grid img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.25);
+}
+
 /* style for js */
 
 .black {
