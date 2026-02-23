@@ -46,11 +46,26 @@ html {
 }
 
 .title {
-	text-align: center;
-	font-weight: 400;
-	font-size: 40px;
-	color: var(--dark);
-  }
+  text-align: center;
+  font-weight: 400;
+  font-size: 40px;
+  color: var(--dark);
+}
+
+.title span {
+  position: relative;
+}
+
+.title span::after {
+  content: "";
+  bottom: -1px;
+  right: 0;
+  position: absolute;
+  display: block;
+  background-color: #000;
+  width: 79px;
+  height: 4px;
+}
 
 .promo {
   position: relative;
@@ -90,9 +105,16 @@ html {
   font-weight: 100;
   line-height: normal;
   cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+.btn:hover {
+  box-shadow: 5px 5px 10px 0 rgba(255, 255, 255, 0.62);
+  font-weight: 500;
 }
 
 .promo__address {
+  position: relative;
   margin-top: 100px;
   color: var(--light);
   font-size: 16px;
@@ -107,6 +129,17 @@ html {
 .promo__address a {
   color: inherit;
   text-decoration: none;
+}
+
+.promo__address::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 40px;
+  height: 49px;
+  left: -45px;
+  top: -17px;
+  background: url("../icons/Arrow.svg") center center / cover no-repeat;
 }
 
 .keywords {
@@ -174,10 +207,33 @@ html {
 }
 
 .services__items li {
+  position: relative;
   margin-top: 10px;
   list-style-type: none;
   font-weight: 400;
   font-size: 16px;
+}
+
+.services__items li:first-child::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 15px;
+  height: 15px;
+  left: -30px;
+  top: 2px;
+  background: url("../icons/Camera.svg") center center / cover no-repeat;
+}
+
+.services__items li:nth-child(3)::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 15px;
+  height: 15px;
+  left: -30px;
+  top: 2px;
+  background: url("../icons/Edit.svg") center center / cover no-repeat;
 }
 
 .services__items-li {
